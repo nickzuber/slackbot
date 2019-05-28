@@ -26,6 +26,15 @@ class Slackbot {
     return this._api('chat.update', params);
   }
 
+  postMessage ({channel, text, params}) {
+    params = {
+      ...params,
+      text,
+      channel
+    };
+    return this._api('chat.postMessage', params);
+  }
+
   updateMessage ({channel, ts, text, params}) {
     params = {
       ...params,
