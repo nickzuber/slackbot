@@ -1,6 +1,6 @@
 const request = require('request');
 
-export default class Slackbot {
+class Slackbot {
   constructor (params) {
     if (!params.name || !params.token) {
       throw new Error('Requires the name and bot token.');
@@ -65,3 +65,5 @@ export default class Slackbot {
     });
   }
 }
+
+module.exports = Slackbot;

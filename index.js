@@ -1,3 +1,3 @@
 const slackbot = require('./src/slackbot');
 
-export default slackbot;
+module.exports = slackbot;
