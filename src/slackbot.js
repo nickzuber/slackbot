@@ -47,7 +47,10 @@ class Slackbot {
 
   _api (method, params) {
     const data = {
-      token: this.token,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.token}`
+      },
       url: 'https://slack.com/api/' + method,
       body: JSON.stringify(params)
     };
